@@ -12,9 +12,12 @@ def decompose_rgb(image):
     return(image_r,image_g,image_b)
 
 def matrix_to_image(input_matrix):
-    dummy_image = np.ones(input_matrix.shape[0],input_matrix[1],3)/256
+    """
+    """
+    dummy_image = np.ones((input_matrix.shape[0],input_matrix.shape[1],3))/256
     matrix_reshaped = np.asarray(input_matrix[:,:,np.newaxis])   #Reshape the values from a 2D Array to an ndarray
-    image = matrix_reshaped*dummy_image 
+    image = matrix_reshaped*dummy_image
+    
     return(image)
 
 def rgb_to_gray(image, c = [0.2125,0.7154,0.0721]):
