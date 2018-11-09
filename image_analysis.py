@@ -14,7 +14,7 @@ def decompose_rgb(image):
 def matrix_to_image(input_matrix):
     """
     """
-    dummy_image = np.ones((input_matrix.shape[0],input_matrix.shape[1],3))/256
+    dummy_image = np.zeros((input_matrix.shape[0],input_matrix.shape[1],3))
     matrix_reshaped = np.asarray(input_matrix[:,:,np.newaxis])   #Reshape the values from a 2D Array to an ndarray
     image = matrix_reshaped*dummy_image
     
